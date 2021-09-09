@@ -1,0 +1,19 @@
+conf t
+    int f0/0
+        ip add dhcp 
+        no sh
+    exit
+    
+    enable secret Cisco123          !! secret = Cisco123   
+    username admin password Pass123 !! credential = admin/Pass123
+    ip domain name home.com         !! domain = home.com
+
+    crypto key gen rsa mod 1024
+    ip ssh ver 2
+
+    line vty 0 4
+        transport in ssh    
+        transport out ssh
+        login local
+    exit
+end 

@@ -1,0 +1,3 @@
+device, ip, username, password
+R1,192.168.230.140,admin,Pass123
+R2,192.168.230.141,admin,Pass123
